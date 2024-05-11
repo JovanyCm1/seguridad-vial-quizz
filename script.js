@@ -1,5 +1,6 @@
 //cargo en un arreglo las imganes de las señales viales. Este sera el orden que se mostrarán
-let banderas = [
+let señales = [
+  //señales preventivas - 9
   "curva-sinuosa.svg",
   "entronque.svg",
   "cruce.svg",
@@ -7,34 +8,71 @@ let banderas = [
   "incorporacion-de-transito.svg",
   "doble-circulacion.svg",
   "ganado.svg",
+  "camino-sinuoso.svg",
+  "salida.svg",
+  //Señales restrictivas - 8
+  "inspeccion.svg",
+  "vuelta-continua.svg",
+  "circulacion.svg",
+  "altura-restringida.svg",
+  "retorno-prohibido.svg",
+  "peso-restringido.svg",
+  "no-parar.svg",
+  "prohibido-seguir-de-frente.svg",
+  //conjuntos - 3
+  "señales-de-destino.svg",
+  "señales-de-identificacion.svg",
+  "señales-de-recomendacion.svg",
 ];
-
 //arreglo que guardara la opcion correcta
-let correcta = [1, 2, 1, 1, 1, 1, 1, 1];
-
+let correcta = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 //arreglo que guardara las opciones a mostrar en cada jugada
 let opciones = [];
 //cargo en el arreglo opciones las opciones a mostrar en cada jugada
+
+//Señales preventivas - 9
 opciones.push(["curva", "curva sinuosa", "curva cerrada"]);
 opciones.push([
   "entronque",
   "entronque a la derecha",
   "entronque a la izquierda",
 ]);
-
 opciones.push(["cruce", "cruce a la derecha", "cruce a la izquierda"]);
-
 opciones.push(["glorieta", "glorieta a la derecha", "glorieta a la izquierda"]);
-
 opciones.push([
   "incorporacion de transito",
   "incorporacion a la derecha",
   "incorporacion a la izquierda",
 ]);
-
 opciones.push(["doble circulacion", "doble sentido", "carril central"]);
-
 opciones.push(["ganado", "vacas", "cruce de animales"]);
+opciones.push(["camino sinuoso", "curvas continuas", "curvas cerradas"]);
+
+opciones.push(["salida", "salida a la derecha", "salida a la izquierda"]);
+
+//Señales restrictivas - 8
+opciones.push(["inspeccion", "camaras", "revision tecnica"]);
+opciones.push(["vuelta continua", "vuelta prohibida", "vuelta a la derecha"]);
+opciones.push(["sentido de circulacion", "carril", "carril de circulacion"]);
+opciones.push(["altura restringida", "puente", "tunel"]);
+opciones.push([
+  "retorno prohibido",
+  "vuelta obligatoria",
+  "retorno a la derecha",
+]);
+
+opciones.push(["peso restringido", "carga", "carga maxima"]);
+opciones.push(["no parar", "no pasar", "no parquear"]);
+opciones.push([
+  "prohibido seguir de frente",
+  "calle sin salida",
+  "calle cerrada",
+]);
+
+//conjuntos - 3
+opciones.push(["señales de destino", "destino", "indicaciones"]);
+opciones.push(["señales de identificacion", "identificacion", "indicaciones"]);
+opciones.push(["señales de recomendacion", "recomendacion", "indicaciones"]);
 
 //variable que guarda la posicion actual
 let posActual = 0;
@@ -54,14 +92,14 @@ function comenzarJuego() {
 //funcion que carga la siguiente imagen y sus opciones
 function cargarBandera() {
   //controla si se terminaron las imagenes viales
-  if (banderas.length <= posActual) {
+  if (señales.length <= posActual) {
     terminarJuego();
   } else {
     //cargo las opciones
     //limpiamos las clases que se asignaron
     limpiarOpciones();
 
-    document.getElementById("imgBandera").src = "img/" + banderas[posActual];
+    document.getElementById("imgBandera").src = "img/" + señales[posActual];
     document.getElementById("n0").innerHTML = opciones[posActual][0];
     document.getElementById("n1").innerHTML = opciones[posActual][1];
     document.getElementById("n2").innerHTML = opciones[posActual][2];
@@ -111,7 +149,7 @@ function terminarJuego() {
   //agreamos los resultados
   document.getElementById("numCorrectas").innerHTML = cantidadAcertadas;
   document.getElementById("numIncorrectas").innerHTML =
-    banderas.length - cantidadAcertadas;
+    señales.length - cantidadAcertadas;
 }
 
 function volverAlInicio() {
