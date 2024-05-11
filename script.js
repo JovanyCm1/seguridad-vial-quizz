@@ -1,10 +1,18 @@
-//cargo en un arreglo las imganes de las banderas. Este sera el orden que se mostrarán
-let banderas = ["curva-sinuosa.svg", "entronque.svg"];
+//cargo en un arreglo las imganes de las señales viales. Este sera el orden que se mostrarán
+let banderas = [
+  "curva-sinuosa.svg",
+  "entronque.svg",
+  "cruce.svg",
+  "glorieta.svg",
+  "incorporacion-de-transito.svg",
+  "doble-circulacion.svg",
+  "ganado.svg",
+];
 
 //arreglo que guardara la opcion correcta
-let correcta = [1, 2];
+let correcta = [1, 2, 1, 1, 1, 1, 1, 1];
 
-//arreglo que guardara los paises a mostrar en cada jugada
+//arreglo que guardara las opciones a mostrar en cada jugada
 let opciones = [];
 //cargo en el arreglo opciones las opciones a mostrar en cada jugada
 opciones.push(["curva", "curva sinuosa", "curva cerrada"]);
@@ -13,6 +21,20 @@ opciones.push([
   "entronque a la derecha",
   "entronque a la izquierda",
 ]);
+
+opciones.push(["cruce", "cruce a la derecha", "cruce a la izquierda"]);
+
+opciones.push(["glorieta", "glorieta a la derecha", "glorieta a la izquierda"]);
+
+opciones.push([
+  "incorporacion de transito",
+  "incorporacion a la derecha",
+  "incorporacion a la izquierda",
+]);
+
+opciones.push(["doble circulacion", "doble sentido", "carril central"]);
+
+opciones.push(["ganado", "vacas", "cruce de animales"]);
 
 //variable que guarda la posicion actual
 let posActual = 0;
@@ -29,9 +51,9 @@ function comenzarJuego() {
   cargarBandera();
 }
 
-//funcion que carga la siguiente bandera y sus opciones
+//funcion que carga la siguiente imagen y sus opciones
 function cargarBandera() {
-  //controlo sis se acabaron las banderas
+  //controla si se terminaron las imagenes viales
   if (banderas.length <= posActual) {
     terminarJuego();
   } else {
