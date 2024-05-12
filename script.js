@@ -59,7 +59,7 @@ let opciones = [];
 //Señales preventivas - 9
 /////////////////////////////////////////////////////////////////////////////////////////1
 opciones.push([
-  "Curva sinuosa a la derecha",
+  "Curva sinuosa",
   "Curva y contracurva derecha",
   "Curva cerrada",
 ]);
