@@ -59,13 +59,13 @@ let opciones = [];
 //Señales preventivas - 9
 /////////////////////////////////////////////////////////////////////////////////////////1
 opciones.push([
-  "Curva y contracurva derecha",
   "Curva sinuosa a la derecha",
+  "Curva y contracurva derecha",
   "Curva cerrada",
 ]);
 opciones.push(["Entronque", "Bifurcación en T", "Entrecruce"]);
 opciones.push(["Cruce", "Cruce a la derecha", "Cruce a la izquierda"]);
-opciones.push(["Glorieta", "Glorieta a la derecha", "Rotonda"]);
+opciones.push(["Rotonda", "Glorieta a la derecha", "Glorieta"]);
 
 ///////////////////////////////////////////////////////////////////////////////////////2
 opciones.push([
