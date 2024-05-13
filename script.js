@@ -106,9 +106,9 @@ opciones.push([
 opciones.push([
   "Peso reservado máximo",
   "Carga máxima",
-  "Pesó total permitido",
+  "Peso total permitido",
 ]);
-opciones.push(["Paso víal cerrado", "Prohibido pasar", "No seguir"]); ///cambiar imagen
+opciones.push(["Paso vial cerrado", "Prohibido pasar", "No seguir"]); ///cambiar imagen
 
 ////////////////////////////////////////////////////////////////////////////////////////5
 opciones.push(["No seguir", "Calle sin salida", "Vía cerrada"]);
@@ -208,4 +208,25 @@ function volverAlInicio() {
   document.getElementById("pantalla-final").style.display = "none";
   document.getElementById("pantalla-inicial").style.display = "block";
   document.getElementById("pantalla-juego").style.display = "none";
+  document.getElementById("pantalla-respuestas").style.display = "none";
+}
+
+window.onload = function () {
+  volverAlInicio();
+};
+function volverAlInicio2() {
+  // Mostrar la pantalla de juego
+  document.getElementById("pantalla-juego").style.display = "block";
+  // Ocultar la pantalla final
+  document.getElementById("pantalla-final").style.display = "none";
+  // Mostrar la pantalla inicial
+  document.getElementById("pantalla-inicial").style.display = "block";
+}
+
+function HojaRespuestas() {
+  // Ocultar las pantallas y mostrar la pantalla de respuestas
+  document.getElementById("pantalla-final").style.display = "none";
+  document.getElementById("pantalla-inicial").style.display = "none";
+  document.getElementById("pantalla-juego").style.display = "none";
+  document.getElementById("pantalla-respuestas").style.display = "block";
 }

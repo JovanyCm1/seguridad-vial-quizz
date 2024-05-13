@@ -102,6 +102,12 @@ footer{
     border-radius: 0 20px 20px 0;
     padding: 7px 0 7px 30px;
 }
+
+
+
+
+
+
 /* clases que se aplicará cuando haya acertada la opcion  */
 .opcion .nombreAcertada{
     background-color: yellowgreen;
@@ -145,3 +151,50 @@ footer{
     border-radius: 50%;
     border: 5px solid #fff;
 }
+
+
+
+
+
+/* PANTALLA respuestas */
+#pantalla-respuestas{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+#pantalla-respuestas{
+    margin: 60px 0;
+}
+.btn1{
+    border: none;
+    background: #0321e5;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn1:hover{
+    transform: scale(1.1);
+}
+
+.btn2 {
+    border: none;
+    background: #ff7f00; /* Cambia el color de fondo a tu elección */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn2:hover {
+    transform: scale(1.1);
+}
+
+#imagenRespuesta {
+    width: 1400px; /* Ancho de la imagen */
+    height: 800px; /* Alto de la imagen */
+    display: block; /* Para que la imagen se muestre como un bloque y pueda aplicar anchura y altura */
+    margin: 0 auto; /* Para centrar la imagen horizontalmente */
+  }
